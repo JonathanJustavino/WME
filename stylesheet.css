@@ -1,3 +1,6 @@
+*{
+  font-family: 'Roboto-Regular', sans-serif;
+}
 
  .nav{
    background-color: #595959;
@@ -5,7 +8,12 @@
    list-style: none;
    padding: 20px 0 20px 0;
    font-family: 'Roboto-Regular', sans-serif;
+   font-size: 14px;
  }
+body{
+  font-family: 'Roboto-Regular', sans-serif;
+  font-size: 14px;  
+}
 
 .nav > li {
   display: inline-block;
