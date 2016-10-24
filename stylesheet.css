@@ -2,5 +2,11 @@
  .nav{
    background-color: #595959;
    text-align: center;
+   list-style: none;
    padding: 20px 0 20px 0;
+   font-family: 'Roboto-Regular', sans-serif;
  }
+
+.nav > li {
+  display: inline-block;
+}
