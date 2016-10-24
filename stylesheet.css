@@ -3,12 +3,10 @@
 }
 
  .nav{
-   background-color: #595959;
    text-align: center;
    list-style: none;
-   padding: 30px 0 30px 0;
    font-family: 'Roboto-Regular', sans-serif;
-   font-size: 14px;
+   font-size: 0px;
  }
 body{
   font-family: 'Roboto-Regular', sans-serif;
@@ -17,18 +15,28 @@ body{
 
 .nav > li {
   display: inline-block;
-  padding: 0;
 }
 
-.nav > li > a {
+.nav > li > div > a{
   text-decoration: none;
-  color: c1c1c1;
+  color: #999999;
+}
+.nav > li > div {
+  color: #999999;
+  text-decoration: none;
   padding: 30px;
-  border-left: 1px solid #4d4d4d;
+  background-color: #e6e6e6;
+  font-size: 14px;
 }
 
-.nav > li > a:hover{
-  color: #4d4d4d;
+.nav > li > div:hover{
+  background-color: #bfbfbf;
+  color: #000000;
+}
+
+.nav > li > div:hover > a {
+  color: #000000;
+  text-decoration: none;
 }
 
 #welcome-text > p{
