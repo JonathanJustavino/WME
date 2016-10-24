@@ -46,3 +46,11 @@ body{
 #welcome-text > p{
   text-align: center;
 }
+
+#welcome-text > p > a {
+  color: rgba(103, 199, 27, 0.81)
+}
+
+#welcome-text > p > a:hover {
+  color: rgba(64, 120, 81, 0.81)
+}
