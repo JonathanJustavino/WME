@@ -1,5 +1,6 @@
 
-@font-face {
-    font-family: fontawesome;
-    src: url(http://fontawesome.io/);
-}
+ .nav{
+   background-color: #595959;
+   text-align: center;
+   padding: 20px 0 20px 0;
+ }
