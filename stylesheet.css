@@ -49,17 +49,17 @@ body{
 
 
 
-#welcome-text > p{
+#welcome-text > p {
   column-count: 3;
   -webkit-column-count: 3;
   -moz-column-count: 3;
   text-align: center;
-  border: 1px solid rgba(0, 0, 0, 0.5);;
-  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
   border-top-color: rgb(109, 195, 44);
-  -webkit-box-shadow: 0 4px 2px -2px gray;
-  -moz-box-shadow: 0 4px 2px -2px gray;
-  box-shadow: 0 4px 2px -2px gray;
+  -webkit-box-shadow: 0 4px 2px 1px rgb(232, 232, 232);
+  -moz-box-shadow: 0 4px 2px 1px rgb(232, 232, 232);
+  box-shadow: 0 4px 2px 1px rgb(232, 232, 232);
 }
 
 #welcome-text > p > a {
@@ -68,4 +68,9 @@ body{
 
 #welcome-text > p > a:hover {
   color: rgba(64, 120, 81, 0.81)
+}
+
+.footer {
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-top-color: rgb(109, 195, 44);
 }
