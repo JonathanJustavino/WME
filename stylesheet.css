@@ -22,15 +22,19 @@ body{
   color: #999999;
 }
 .nav > li > div {
+  background: #abbaab;
+  background: -webkit-linear-gradient(to bottom, #abbaab , #ffffff);
+  background: linear-gradient(to bottom, #abbaab , #ffffff);
   color: #999999;
   text-decoration: none;
   padding: 30px;
-  background-color: #e6e6e6;
   font-size: 14px;
 }
 
 .nav > li > div:hover{
-  background-color: #bfbfbf;
+  background: #8fa38f;
+  background: -webkit-linear-gradient(to bottom, #8fa38f , #e3e8e3);
+  background: linear-gradient(to bottom, #8fa38f , #e3e8e3);
   color: #000000;
 }
 
