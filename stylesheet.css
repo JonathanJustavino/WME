@@ -5,7 +5,6 @@
 body{
   font-family: 'Roboto-Regular', sans-serif;
   font-size: 14px;
-  /*margin: 0px;*/
 }
 
 .nav{
@@ -85,6 +84,10 @@ body{
   border-right: 1px solid;
 }
 
+.content{
+  padding-left: 5%;
+  padding-right: 5%;
+}
 
 
 #welcome-text > p {
@@ -120,4 +123,6 @@ body{
 .footer {
   border: 1px solid rgba(0, 0, 0, 0);
   border-top-color: rgb(109, 195, 44);
+  margin-left: 5%;
+  margin-right: 5%;
 }
