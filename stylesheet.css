@@ -25,14 +25,29 @@ body{
   color: #999;
 }
 
+.icon-link img:last-child{
+  display: none;
+}
+
+.icon-link:hover img:first-child{
+  display: none;
+}
+
+.icon-link:hover img:last-child{
+  display: inline-block;
+}
+
 #icon{
   display: inline-block;
   float: left;
   margin-bottom: -25px;
   padding: 0px;
   border-left: 0px;
-  padding-right: 3  0px;
+  padding-right: 30px;
 }
+
+
+
 
 .nav img{
   width: 110px;
