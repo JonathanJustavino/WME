@@ -63,11 +63,20 @@ body{
 }
 
 #welcome-text > p > a {
-  color: rgba(103, 199, 27, 0.81)
+  color: rgba(103, 199, 27, 0.81);
 }
 
 #welcome-text > p > a:hover {
-  color: rgba(64, 120, 81, 0.81)
+  color: rgba(64, 120, 81, 0.81);
+}
+
+.sort-options-1{
+  color: rgb(151, 155, 158);
+}
+
+.sort-options-2{
+  color: rgb(212, 212, 210);
+  text-decoration: underline;
 }
 
 .footer {
