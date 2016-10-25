@@ -2,15 +2,18 @@
   font-family: 'Roboto-Regular', sans-serif;
 }
 
- .nav{
-   text-align: center;
-   list-style: none;
-   font-family: 'Roboto-Regular', sans-serif;
-   font-size: 0px;
- }
 body{
   font-family: 'Roboto-Regular', sans-serif;
   font-size: 14px;
+  margin: 0px;
+}
+
+.nav{
+  text-align: center;
+  list-style: none;
+  font-family: 'Roboto-Regular', sans-serif;
+  font-size: 0px;
+  padding: 0px;
 }
 
 .nav > li {
@@ -19,16 +22,39 @@ body{
 
 .nav > li > div > a{
   text-decoration: none;
-  color: #999999;
+  color: #999;
 }
-.nav > li > div {
+
+#icon{
+  display: inline-block;
+  float: left;
+  margin-bottom: -25px;
+  padding: 0px;
+  border-left: 0px;
+  padding-right: 3  0px;
+}
+
+.nav img{
+  width: 110px;
+  height: 65px;
+}
+
+#nav-border{
+  border-bottom: 1px solid;
+  border-color: #999;
   background: #abbaab;
   background: -webkit-linear-gradient(to bottom, #abbaab , #ffffff);
   background: linear-gradient(to bottom, #abbaab , #ffffff);
+
+}
+
+.nav > li > div {
   color: #999999;
   text-decoration: none;
   padding: 30px;
   font-size: 14px;
+  border-color: #999999;
+  border-left: 1px solid;
 }
 
 .nav > li > div:hover{
@@ -43,8 +69,8 @@ body{
   text-decoration: none;
 }
 
-.content{
-
+#last-menu-button{
+  border-right: 1px solid;
 }
 
 
