@@ -5,7 +5,7 @@
 body{
   font-family: 'Roboto-Regular', sans-serif;
   font-size: 14px;
-  margin: 0px;
+  /*margin: 0px;*/
 }
 
 .nav{
@@ -46,9 +46,6 @@ body{
   padding-right: 30px;
 }
 
-
-
-
 .nav img{
   width: 110px;
   height: 65px;
@@ -58,8 +55,8 @@ body{
   border-bottom: 1px solid;
   border-color: #999;
   background: #abbaab;
-  background: -webkit-linear-gradient(to bottom, #abbaab , #ffffff);
-  background: linear-gradient(to bottom, #abbaab , #ffffff);
+  background: -webkit-linear-gradient(to bottom, #d1d1d1 , #ffffff);
+  background: linear-gradient(to bottom, #d1d1d1 , #ffffff);
 
 }
 
@@ -74,8 +71,8 @@ body{
 
 .nav > li > div:hover{
   background: #8fa38f;
-  background: -webkit-linear-gradient(to bottom, #8fa38f , #e3e8e3);
-  background: linear-gradient(to bottom, #8fa38f , #e3e8e3);
+  background: -webkit-linear-gradient(to bottom, #ccc , #bfbfbf);
+  background: linear-gradient(to bottom, #ccc , #bfbfbf);
   color: #000000;
 }
 
