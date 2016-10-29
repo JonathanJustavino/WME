@@ -440,7 +440,7 @@ function fillTable(obj, append){
   for (var prop in obj) {
     if (obj.hasOwnProperty(prop)) {
       var td = document.createElement('TD');
-      var text = document.createTextNode(prop)
+      var text = document.createTextNode(obj[prop])
       console.log('created data' + i++)
       td.appendChild(text)
       append.appendChild(td)
@@ -452,7 +452,8 @@ function fillTable(obj, append){
 function createTable(tableData){
   for(var i = 0; i < tableData.length; i++){
     var tr = document.createElement('TR');
-    fillTable(tableData, tr)
+    tr.setAttribute('class', 'table-row')
+    fillTable(tableData[i], tr)
     tableStart.appendChild(tr)
   }
 }

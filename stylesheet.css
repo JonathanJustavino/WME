@@ -120,6 +120,14 @@ body{
   text-decoration: underline;
 }
 
+#my-table{
+  border-collapse: collapse;
+}
+
+.table-row{
+  border-bottom: 1px solid #ddd;
+}
+
 .footer {
   border: 1px solid rgba(0, 0, 0, 0);
   border-top-color: rgb(109, 195, 44);
