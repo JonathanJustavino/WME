@@ -1,19 +1,19 @@
 var myData = [
  {
-   "FIELD1": "id ",
-   "FIELD2": "name                ",
-   "FIELD3": "birth rate per 1000",
-   "FIELD4": "cell phones per 100",
-   "FIELD5": "children per woman",
-   "FIELD6": "electricity consumption per capita",
-   "FIELD7": "gdp_per_capita",
-   "FIELD8": "gdp_per_capita_growth",
-   "FIELD9": "inflation annual",
-   "FIELD10": "internet user per 100",
-   "FIELD11": "life expectancy",
-   "FIELD12": "military expenditure percent of gdp",
-   "FIELD13": "gps_lat      ",
-   "FIELD14": "gps_long"
+   "FIELD1": "ID ",
+   "FIELD2": "Name                ",
+   "FIELD3": "Birth Rate / 1000",
+   "FIELD4": "Cell Phones / 100",
+   "FIELD5": "Children / Woman",
+   "FIELD6": "Electricity Consumption / Capita",
+   "FIELD7": "GdP / Capita",
+   "FIELD8": "GdP / Capita growth",
+   "FIELD9": "Inflation Annual",
+   "FIELD10": "Internet User / 100",
+   "FIELD11": "Life Expectancy",
+   "FIELD12": "Military Expenditure Percent of GdP",
+   "FIELD13": "GPS Latitude      ",
+   "FIELD14": "GPS Longitude"
  },
  {
    "FIELD1": "001",
@@ -459,6 +459,7 @@ function createTable(tableData){
 }
 
 createTable(table)
+
 
 
 

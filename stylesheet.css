@@ -122,6 +122,10 @@ body{
   text-decoration: underline;
 }
 
+.sort-options-2:hover{
+  text-decoration: none;
+}
+
 #my-table{
   border-collapse: collapse;
 }
