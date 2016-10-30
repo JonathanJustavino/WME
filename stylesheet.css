@@ -130,6 +130,10 @@ body{
   border-bottom: 1px solid #ddd;
 }
 
+.table-row:hover{
+  background-color: #eee;
+}
+
 .footer {
   border: 1px solid rgba(0, 0, 0, 0);
   border-top-color: rgb(109, 195, 44);

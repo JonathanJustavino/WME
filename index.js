@@ -438,7 +438,7 @@ function propertyCount(obj){
 function fillTable(obj, append){
   var i = 1;
   for (var prop in obj) {
-    if (obj.hasOwnProperty(prop)) {
+    if (true || obj.hasOwnProperty(prop)) {
       var td = document.createElement('TD');
       var text = document.createTextNode(obj[prop])
       console.log('created data' + i++)
