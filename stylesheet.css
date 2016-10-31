@@ -163,6 +163,7 @@ body{
 
 .table-row-start{
   border-bottom: 3px solid #ccc;
+  font-weight: bold;
 }
 
 .table-row{
