@@ -103,7 +103,7 @@ body{
   column-count: 3;
   -webkit-column-count: 3;
   -moz-column-count: 3;
-  text-align: center;
+  text-align: left;
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 2px;
   border-top-color: rgb(109, 195, 44);
@@ -112,6 +112,23 @@ body{
   box-shadow: 0 4px 2px 1px rgb(232, 232, 232);
   margin-top: 30px;
   padding: 10px;
+}
+
+@media screen
+  and (max-width: 800px){
+    #welcome-text > p {
+      column-count: 2;
+      -webkit-column-count: 2;
+      -moz-column-count: 2;
+    }
+}
+@media screen
+  and (max-width: 480px){
+    #welcome-text > p {
+      column-count: 1;
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+    }
 }
 
 #welcome-text > p > a {
