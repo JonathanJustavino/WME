@@ -441,7 +441,6 @@ function fillTable(obj, append){
     if (true || obj.hasOwnProperty(prop)) {
       var td = document.createElement('TD');
       var text = document.createTextNode(obj[prop])
-      console.log('created data' + i++)
       td.appendChild(text)
       append.appendChild(td)
     }

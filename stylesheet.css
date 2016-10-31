@@ -75,15 +75,18 @@ body{
   background: -webkit-linear-gradient(to bottom, #ccc , #bfbfbf);
   background: linear-gradient(to bottom, #ccc , #bfbfbf);
   color: #000000;
+  border-color: #999999;
 }
 
 .nav > li > div:hover > a {
   color: #000000;
   text-decoration: none;
+  border-color: #999999;
 }
 
 #last-menu-button{
   border-right: 1px solid;
+  border-color: #999999;
 }
 
 .content{
