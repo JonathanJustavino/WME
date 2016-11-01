@@ -430,9 +430,7 @@ function jsonToArray(arr, jsonData){
   return arr
 }
 
-var table = jsonToArray(myData)
 
-var tableStart = document.getElementById('my-table')
 
 function createGlyphIcons(element){
   var iTag = document.createElement('I')
@@ -462,6 +460,8 @@ function fillTable(obj, append){
         icons.setAttribute('id', 'glyphicon')
         createGlyphIcons(icons)
         td.appendChild(icons)
+        td.setAttribute('id', 'on-click')
+        td.setAttribute('onclick', 'sortTable()')
       }
 
     }
@@ -550,7 +550,23 @@ function renderTable(table, callback){
   createTable(sorted)
 }
 
+/**
+ * sorts the table ascending if its descending
+ * and the other way around
+ * @return {void}
+ */
+function sortTable(){
+  if(table[0].FIELD2 < table[table.length-1].FIELD2){
+    renderTable(table, sortTableDesc)
+  }else{
+    renderTable(table, sortTableAsc)
+  }
+}
 
 
+var table = jsonToArray(myData)
+var tableStart = document.getElementById('my-table')
 
 createTable(table)
+
+document.getElementById('on-click').setAttribute('onclick', 'sortTable()')
