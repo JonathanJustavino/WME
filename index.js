@@ -442,7 +442,6 @@ var tableStart = document.getElementById('my-table')
  * @return {void}
  */
 function fillTable(obj, append){
-  var i = 1;
   for (var prop in obj) {
     if (true || obj.hasOwnProperty(prop)) {
       var td = document.createElement('TD');
