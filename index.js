@@ -460,6 +460,37 @@ function createTable(tableData){
   }
 }
 
+function sortTableAsc(table){
+  table.shift()
+  return table.sort(function (a, b) {
+    if (a.FIELD2 > b.FIELD2) {
+      return 1;
+    }
+    if (a.FIELD2 < b.FIELD2) {
+      return -1;
+    }
+    // a must be equal to b
+    return 0;
+  });
+}
+
+function sortTableDesc(table){
+  table.shift()
+  return table.sort(function (a, b) {
+    if (a.FIELD2 > b.FIELD2) {
+      return -1;
+    }
+    if (a.FIELD2 < b.FIELD2) {
+      return 1;
+    }
+    // a must be equal to b
+    return 0;
+  });
+}
+
+
+
+
 createTable(table)
 
 
