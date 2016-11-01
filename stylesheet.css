@@ -7,6 +7,8 @@ body{
   font-family: 'Roboto-Regular', sans-serif;
   font-size: 14px;
   background-color: #fff;
+  line-height: 145%;
+  font-style: normal;
 }
 
 .nav{
@@ -167,7 +169,7 @@ body{
 }
 
 .table-row-start > td{
-    padding: 10px; 
+    padding: 10px;
 }
 
 .table-row{
