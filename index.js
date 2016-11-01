@@ -417,7 +417,12 @@ var myData = [
  }
 ]
 
-
+/**
+ * iterating over an array to push the data into an array
+ * @param  {Array} arr      [empty array]
+ * @param  {JSON} jsonData [json data]
+ * @return {Array}          [array filled with json data]
+ */
 function jsonToArray(arr, jsonData){
   for(var i in jsonData){
     arr.push([i, jsonData [i]]);
@@ -427,14 +432,15 @@ function jsonToArray(arr, jsonData){
 
 var table = jsonToArray(myData)
 
-// alert(jsonToArray(result, myData))
-
 var tableStart = document.getElementById('my-table')
 
-function propertyCount(obj){
-  return Object.keys(obj).length
-}
 
+/**
+ *  filling the table with the data of the properties from the given object
+ * @param  {Object} obj    [the object which stores the properties]
+ * @param  {html oject} append [the html object on which the properties will be appended]
+ * @return {void}
+ */
 function fillTable(obj, append){
   var i = 1;
   for (var prop in obj) {
@@ -448,6 +454,11 @@ function fillTable(obj, append){
 }
 
 
+/**
+ *  filling the table with table-rows for each object property
+ * @param  {Array} tableData [Array with data]
+ * @return {void}
+ */
 function createTable(tableData){
   for(var i = 0; i < tableData.length; i++){
     var tr = document.createElement('TR');
@@ -460,6 +471,12 @@ function createTable(tableData){
   }
 }
 
+
+/**
+ * sorting the table ascending by the country name (FIELD2)
+ * @param  {Object} table
+ * @return {Object} sorted table
+ */
 function sortTableAsc(table){
   table.shift()
   return table.sort(function (a, b) {
@@ -469,11 +486,17 @@ function sortTableAsc(table){
     if (a.FIELD2 < b.FIELD2) {
       return -1;
     }
-    // a must be equal to b
+    // a equal to b
     return 0;
   });
 }
 
+
+/**
+ * sorting the table descending by the country name (FIELD2)
+ * @param  {Object} table
+ * @return {Object} sorted table
+ */
 function sortTableDesc(table){
   table.shift()
   return table.sort(function (a, b) {
@@ -483,7 +506,7 @@ function sortTableDesc(table){
     if (a.FIELD2 < b.FIELD2) {
       return 1;
     }
-    // a must be equal to b
+    // a equal to b
     return 0;
   });
 }
@@ -491,12 +514,10 @@ function sortTableDesc(table){
 
 
 
+
+
+
 createTable(table)
-
-
-
-
-
 
 
 
