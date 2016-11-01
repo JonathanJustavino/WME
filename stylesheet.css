@@ -188,7 +188,14 @@ body{
 }
 
 #glyphicon{
-  color: green;
+  color: rgba(103, 199, 27, 0.81);
+  text-align: center;
+  white-space: nowrap;
+  padding-left: 4px;
+}
+
+#glyphicon:hover{
+  color: rgba(64, 120, 81, 0.81);
 }
 
 .footer {

@@ -456,13 +456,14 @@ function fillTable(obj, append){
       var td = document.createElement('TD');
       var text = document.createTextNode(obj[prop])
       td.appendChild(text)
-      if(obj[prop] === 'Name'){
-        var div = document.createElement('div')
-        div.setAttribute('id', 'glyphicon')
-        createGlyphIcons(div)
-        td.appendChild(div)
-      }
       append.appendChild(td)
+      if(obj[prop] === 'Name'){
+        var icons = document.createElement('SPAN')
+        icons.setAttribute('id', 'glyphicon')
+        createGlyphIcons(icons)
+        td.appendChild(icons)
+      }
+
     }
   }
 }
