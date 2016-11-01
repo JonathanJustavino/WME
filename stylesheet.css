@@ -187,6 +187,10 @@ body{
   background-color: #eee;
 }
 
+#glyphicon{
+  color: green;
+}
+
 .footer {
   border: 1px solid rgba(0, 0, 0, 0);
   border-top-color: rgb(109, 195, 44);

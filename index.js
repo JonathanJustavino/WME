@@ -434,6 +434,15 @@ var table = jsonToArray(myData)
 
 var tableStart = document.getElementById('my-table')
 
+function createGlyphIcons(element){
+  var iTag = document.createElement('I')
+  var iTag2 = document.createElement('I')
+  iTag.setAttribute('class', 'fa fa-angle-up')
+  iTag2.setAttribute('class', 'fa fa-angle-down')
+  iTag.appendChild(iTag2)
+  element.appendChild(iTag)
+}
+
 
 /**
  *  filling the table with the data of the properties from the given object
@@ -447,6 +456,12 @@ function fillTable(obj, append){
       var td = document.createElement('TD');
       var text = document.createTextNode(obj[prop])
       td.appendChild(text)
+      if(obj[prop] === 'Name'){
+        var div = document.createElement('div')
+        div.setAttribute('id', 'glyphicon')
+        createGlyphIcons(div)
+        td.appendChild(div)
+      }
       append.appendChild(td)
     }
   }
