@@ -474,11 +474,10 @@ function createTable(tableData){
 
 /**
  * sorting the table ascending by the country name (FIELD2)
- * @param  {Object} table
- * @return {Object} sorted table
+ * @param  {Array} table
+ * @return {Array} sorted table
  */
 function sortTableAsc(table){
-  table.shift()
   return table.sort(function (a, b) {
     if (a.FIELD2 > b.FIELD2) {
       return 1;
@@ -494,11 +493,10 @@ function sortTableAsc(table){
 
 /**
  * sorting the table descending by the country name (FIELD2)
- * @param  {Object} table
- * @return {Object} sorted table
+ * @param  {Array} table
+ * @return {Array} sorted table
  */
 function sortTableDesc(table){
-  table.shift()
   return table.sort(function (a, b) {
     if (a.FIELD2 > b.FIELD2) {
       return -1;
@@ -511,20 +509,33 @@ function sortTableDesc(table){
   });
 }
 
+/**
+ * deletes the table
+ * @return {void}
+ */
+function deleteTable(){
+  var tab = document.getElementById('my-table')
+  for(var i = tab.childNodes.length; i > 0; i--){
+    tab.removeChild(tab.lastChild)
+  }
+}
 
 
+/**
+ * renders the table and sorts it
+ * @param  {Array}   table    [the table with the data]
+ * @param  {Function} callback [defining what kind of sorting will be executed]
+ * @return {void}
+ */
+function renderTable(table, callback){
+  var first = table.shift();
+  var sorted = callback(table)
+  sorted.unshift(first)
+  deleteTable()
+  createTable(sorted)
+}
 
 
 
 
 createTable(table)
-
-
-
-
-
-
-
-
-
-//

@@ -166,6 +166,10 @@ body{
   font-weight: bold;
 }
 
+.table-row-start > td{
+    padding: 10px; 
+}
+
 .table-row{
   border-bottom: 1px solid #ddd;
 }
