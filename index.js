@@ -431,7 +431,12 @@ function jsonToArray(arr, jsonData){
 }
 
 
-
+/**
+ * creates two font awesome glyphicons appending
+ * them to the given element
+ * @param  {html element} element [the element the two glyphicons will be appended to]
+ * @return {void}
+ */
 function createGlyphIcons(element){
   var iTag = document.createElement('I')
   var iTag2 = document.createElement('I')
@@ -562,6 +567,39 @@ function sortTable(){
     renderTable(table, sortTableAsc)
   }
 }
+
+/**
+ * applying a css class for the elemnt in the table
+ * matching the given number
+ * @param  {Array} arr    [Array containing the td elements
+ *                         of each table row]
+ * @param  {Number} number [the number to get the specific td element]
+ * @return {void}
+ */
+function applyClassHide(arr, number){
+  for(var i = 0; i < arr.length; i++){
+    if(i === number-1){
+      arr[i].setAttribute('class', 'hide')
+    }
+  }
+}
+
+
+/**
+ * getting the table and its tabel rows
+ * iterating over every row and calling the applyClassHide function
+ * @param  {Number} number [the nth element the applyClassHide function will
+ *                          be called on]
+ * @return {void}
+ */
+function showHide(number){
+  var entries = document.getElementById('my-table').children
+  for(var i = 0; i < entries.length; i++){
+    var children = entries[i]
+    applyClassHide(children.children, number)
+  }
+}
+
 
 
 var table = jsonToArray(myData)

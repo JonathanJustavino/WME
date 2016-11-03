@@ -148,9 +148,6 @@ body{
     }
 }
 
-/*#my-table > tr > td:last-child{
-  display: none;
-}*/
 
 #welcome-text > p > a {
   color: rgba(103, 199, 27, 0.81);
@@ -182,6 +179,9 @@ body{
   border-collapse: collapse;
 }
 
+.hide{
+  display: none;
+}
 
 .table-row-start{
   border-bottom: 3px solid #ccc;
