@@ -592,7 +592,7 @@ function applyClassHide(arr, number){
  *                          be called on]
  * @return {void}
  */
-function showHide(number){
+function hideElements(number){
   var entries = document.getElementById('my-table').children
   for(var i = 0; i < entries.length; i++){
     var children = entries[i]
