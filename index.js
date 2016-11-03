@@ -1,7 +1,7 @@
 var myData = [
  {
    "FIELD1": "ID ",
-   "FIELD2": "Name",
+   "FIELD2": "Country",
    "FIELD3": "Birth Rate / 1000",
    "FIELD4": "Cell Phones / 100",
    "FIELD5": "Children / Woman",
@@ -455,7 +455,7 @@ function fillTable(obj, append){
       var text = document.createTextNode(obj[prop])
       td.appendChild(text)
       append.appendChild(td)
-      if(obj[prop] === 'Name'){
+      if(obj[prop] === 'Country'){
         var icons = document.createElement('SPAN')
         icons.setAttribute('id', 'glyphicon')
         createGlyphIcons(icons)
