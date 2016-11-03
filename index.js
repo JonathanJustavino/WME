@@ -568,6 +568,7 @@ function sortTable(){
   }
 }
 
+//TODO not working properly messing the table order up
 /**
  * applying a css class for the elemnt in the table
  * matching the given number
@@ -577,11 +578,11 @@ function sortTable(){
  * @return {void}
  */
 function applyClassHide(arr, number){
-  for(var i = 0; i < arr.length; i++){
-    if(i === number-1){
-      arr[i].setAttribute('class', 'hide')
+    for(var i = 0; i < arr.length; i++){
+      if(i === number-1){
+          arr[i].style.display = "none";
+      }
     }
-  }
 }
 
 
@@ -595,8 +596,8 @@ function applyClassHide(arr, number){
 function hideElements(number){
   var entries = document.getElementById('my-table').children
   for(var i = 0; i < entries.length; i++){
-    var children = entries[i]
-    applyClassHide(children.children, number)
+    var rows = entries[i]
+    applyClassHide(rows.children, number)
   }
 }
 
