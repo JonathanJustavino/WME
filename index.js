@@ -543,16 +543,23 @@ function deleteTable(){
 
 /**
  * renders the table and sorts it
+ * checking for hidden columns and hinding them again
  * @param  {Array}   table    [the table with the data]
  * @param  {Function} callback [defining what kind of sorting will be executed]
  * @return {void}
  */
 function renderTable(table, callback){
+  var hiddenColumns = maintainStructure()
   var first = table.shift();
   var sorted = callback(table)
   sorted.unshift(first)
   deleteTable()
   createTable(sorted)
+  if(hiddenColumns.length != 0){
+    for(var i = 0; i < hiddenColumns.length; i++){
+      hideElements(hiddenColumns[i] + 1)
+    }
+  }
 }
 
 /**
@@ -568,37 +575,77 @@ function sortTable(){
   }
 }
 
-//TODO not working properly messing the table order up
 /**
- * applying a css class for the elemnt in the table
- * matching the given number
- * @param  {Array} arr    [Array containing the td elements
- *                         of each table row]
- * @param  {Number} number [the number to get the specific td element]
+ * setting the css style of specific table data to none
+ * causing them to be hidden
+ * @param  {Array} arr    [given array with the data]
+ * @param  {Number} number [the number to get the right data of the array]
  * @return {void}
  */
 function applyClassHide(arr, number){
-    for(var i = 0; i < arr.length; i++){
-      if(i === number-1){
-          arr[i].style.display = "none";
-      }
-    }
+  arr[number-1].style.display = "none";
+}
+
+/**
+ * setting the css style of specific table data to empty string
+ * causing them to be displayed
+ * @param  {Array} arr    [given array with the data]
+ * @param  {Number} number [the number to get the right data of the array]
+ * @return {void}
+ */
+function removeClassHide(arr, number){
+  arr[number-1].style.display = "";
 }
 
 
 /**
- * getting the table and its tabel rows
- * iterating over every row and calling the applyClassHide function
- * @param  {Number} number [the nth element the applyClassHide function will
- *                          be called on]
+ * returns a bool whether a element of the table is hidden or not
+ * @param  {Number}  number [the number of the array which will be checked]
+ * @return {Boolean}        [the boolean wheter the element is hidden or not]
+ */
+function isHidden(number){
+    var entries = document.getElementById('my-table').children
+    var rowElements = entries[0].children
+    if(rowElements[number-1].style.display === 'none'){
+      return true
+    }
+    return false
+}
+
+/**
+ * hiding or showing specific table columns
+ * @param  {Number} number [iterating over the table and executing
+ *                         applyClassHide/removeClassHide on specific rows]
  * @return {void}
  */
 function hideElements(number){
   var entries = document.getElementById('my-table').children
-  for(var i = 0; i < entries.length; i++){
-    var rows = entries[i]
-    applyClassHide(rows.children, number)
+  if(isHidden(number)){
+    for(var i = 0; i < entries.length; i++){
+      removeClassHide(entries[i].children, number)
+    }
   }
+  else{
+    for(var i = 0; i < entries.length; i++){
+      applyClassHide(entries[i].children, number)
+    }
+  }
+}
+
+/**
+ * collecting all hidden columns of the data table
+ * and stores them as numbers in an array
+ * @return {Array} [the array with the hidden columns as numbers]
+ */
+function maintainStructure(){
+  var firstrow = document.getElementById('my-table').children[0].children
+  var columns = []
+  for(var i = 0; i < firstrow.length; i++){
+    if(firstrow[i].style.display === 'none'){
+      columns.push(i)
+    }
+  }
+  return columns
 }
 
 
