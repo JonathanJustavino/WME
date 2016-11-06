@@ -545,13 +545,13 @@ function deleteTable(){
  * renders the table and sorts it
  * checking for hidden columns and hinding them again
  * @param  {Array}   table    [the table with the data]
- * @param  {Function} callback [defining what kind of sorting will be executed]
+ * @param  {Function} sortMethod [defining how the tbale will be sorted]
  * @return {void}
  */
-function renderTable(table, callback){
+function renderTable(table, sortMethod){
   var hiddenColumns = maintainStructure()
   var first = table.shift();
-  var sorted = callback(table)
+  var sorted = sortMethod(table)
   sorted.unshift(first)
   deleteTable()
   createTable(sorted)
