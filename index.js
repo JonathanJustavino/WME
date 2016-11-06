@@ -468,7 +468,6 @@ function fillTable(obj, append){
         td.setAttribute('id', 'on-click')
         td.setAttribute('onclick', 'sortTable()')
       }
-
     }
   }
 }
