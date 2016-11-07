@@ -652,6 +652,6 @@ function maintainStructure(){
 var table = jsonToArray(myData)
 var tableStart = document.getElementById('my-table')
 
-createTable(table)
+renderTable(table, sortTableAsc)
 
 document.getElementById('on-click').setAttribute('onclick', 'sortTable()')
