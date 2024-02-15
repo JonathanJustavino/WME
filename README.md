@@ -1,5 +1,5 @@
 # WME
-repository for wme projects
+Repository for Task of the University Module Web and Multimedia Engineering
 
 teamnumber: 47
 
