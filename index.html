@@ -1,76 +1,99 @@
 <!DOCTYPE html>
 <html>
-  <header>
-    <title>World-Data</title>
-    <description></description>
-    <keywords></keywords>
-    <meta charset="utf-8"/>
-    <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
-    <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"/>
-  </header>
-  <body>
-    <div id="nav-border">
-      <ul class="nav">
-        <li><a class="icon-link" href="">
-              <div id="icon">
-                <img id="icon1" src="logo.png"/>
-                <img id="icon2" src="logo_hover.png"/>
-              </div>
-            </a>
-        </li>
-        <li><div> <i class="fa fa-list-ul"> </i> <a href=""> A1 - Table</a> </div></li>
-        <li><div> <i class="fa fa-list-ul"> </i><a href=""> A2 - Parse</a> </div></li>
-        <li><div> <i class="fa fa-list-ul"> </i><a href=""> A2 - Save</a> </div></li>
-        <li><div> <i class="fa fa-list-ul"> </i><a > A2 - Print</a> </div></li>
-        <li><div> <i class="fa fa-list-ul"> </i><a href=""> A3 - REST</a> </div></li>
-        <li><div id="last-menu-button"> <i class="fa fa-list-ul"> </i><a href=""> A4 - Vis</a> </div></li>
-      </ul>
-    </div>
-    <div class="content">
-      <h1>World Data Overview ...</h1>
-      <div id="welcome-text">
-        <p>
-          Mavericks reality distortion gradients attenuation.
-          Thought through and through notifications transparency game center multitasking aluminum advanced desktop operating system genius bar.
-          This changes everything designed by Apple in California passbook.
-          Control center photos all-new design SDK technology clock.
-          Simplicity is actually quite complicated. Functional layers 9:41 am partly cloudy minimalism.
-          Dock airdrop slide to answer music. Video multitouch iTunes compass.
-          Harmonious finder grid system retina animation compressor experience keynote.
-          Redesign services API notes system preferences.
-          Features siri flat buttons airplane mode calculator. Missed call cover flow compare models.
-          Wi-Fi apple care volume reminder controls. My stations folders mac power ultimate upgrade.
-          Shop online guicktime trackpad server aperture rumors education safari one to one.
-          Remote desktop motion business. Backlit keyboard chess phone airport extreme support iPad.
-          Accessories magsafe terminal final cut pro. Featured TV shows downloads digital color meter.
-          Glossy tech specs bluetooth manuals. OpenGL products FaceTime free shipping recycling mission control applications. from: <a href="">jony iasurn</a>
-        </p>
-      </div>
-      <div class="sort-options-container">
-        <p class="sort-options-1">Show/Hide: <a class="sort-options-2" onclick="hideElements(3)">birth rate</a> <span>| </span><a class="sort-options-2" onclick="hideElements(4)">cellphones</a> <span>| </span>
-        <a class="sort-options-2" onclick="hideElements(5)">children / woman</a> <span>| </span><a class="sort-options-2" onclick="hideElements(6)">electric usage</a> <span>| </span><a class="sort-options-2" onclick="hideElements(10)">internet usage</a></p>
-      </div>
-      <table id="my-table">
-        <thead>
-        </thead>
-        <tbody>
-        </tbody>
-      </table>
-      <div class="sort-options-container">
-        <p class="sort-options-1">Show/Hide: <a class="sort-options-2" onclick="hideElements(3)">birth rate</a> <span>| </span><a class="sort-options-2" onclick="hideElements(4)">cellphones</a> <span>| </span>
-        <a class="sort-options-2" onclick="hideElements(5)">children / woman</a> <span>| </span><a class="sort-options-2" onclick="hideElements(6)">electric usage</a> <span>| </span><a class="sort-options-2" onclick="hideElements(10)">internet usage</a></p>
-      </div>
-  </div>
-  </body>
-  <footer class="footer">
-    <script type="text/javascript" src="./index.js"></script>
-    <span>
-      This solution has been created by:
-    </span>
-    <br />
-    <span>
-        <author>Jeannine Born(s9560875) and Jonathan Justavino Lüderitz(4102359) Team - 47</author>
-    </span>
-  </footer>
+
+<head>
+	<meta charset="UTF-8">
+	<title>FIXME</title>
+	<meta name="description" content="FIXME">
+	<meta name="author" content="FIXME">
+	<meta name="keywords" content="FIXME">
+
+	<link href="html5reset.css" type="text/css" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="style.css" type="text/css" rel="stylesheet">
+
+  <?php
+    include("parse.php");
+    include("print.php");
+    include("save.php");
+    include("world_data_parser.php");
+  ?>
+
+
+</head>
+
+<body>
+
+<header id="sticky_header">
+	<nav class="container clearfix" role="navigation">
+		<a class="logo" href="/">world_data</a>
+		<ul id="main_nav" class="clearfix">
+			<li>
+				<a href=""><i class="fa fa-list-ul"></i>A1 - Table</a>
+			</li>
+			<li>
+				<a href="parse.php"><i class="fa fa-list-ul"></i>A2 - Parse</a>
+			</li>
+			<li>
+				<a href="save.php"><i class="fa fa-list-ul"></i>A2 - Save</a>
+			</li>
+			<li>
+				<a href="print.php"><i class="fa fa-list-ul"></i>A2 - Print</a>
+			</li>
+			<li>
+				<a href=""><i class="fa fa-list-ul"></i>A3 - REST</a>
+			</li>
+			<li>
+				<a href=""><i class="fa fa-list-ul"></i>A4 - Vis</a>
+			</li>
+		</ul>
+		 <a href="#" id="pull"><i class="fa fa-list-ul"></i></a>
+	</nav>
+</header>
+
+<div class="container">
+	<section>
+		<h1>World Data Overview ... </h1>
+
+		<table>
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Country</th>
+					<th>Attribute 1</th>
+					<th>Attribute 2</th>
+					<th>Attribute 3</th>
+					<th>Attribute 4</th>
+					<th>Attribute 5</th>
+				</tr>
+			</thead>
+			<tbody id="table_body">
+        <?php
+
+        ?>
+			</tbody>
+		</table>
+
+	</section>
+</div>
+
+<footer>
+	<div class="container">
+		<div>
+			<p>
+				Copyright &copy; 2016 world_data<br>
+				Course exercise of the lecture Web and Multimedia Engineering.
+			</p>
+		</div>
+		<div class="right">
+			<p>
+				This solution has been created by:<br>
+				FIXME
+			</p>
+		</div>
+	</div>
+</footer>
+
+</body>
 </html>
